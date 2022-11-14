@@ -32,6 +32,11 @@
             this.gbxExercicios = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnllist = new System.Windows.Forms.Panel();
+            this.btnApenasVerdade = new System.Windows.Forms.Button();
+            this.btnApenasVogais = new System.Windows.Forms.Button();
+            this.btnNumeroPar = new System.Windows.Forms.Button();
+            this.btnMesPar = new System.Windows.Forms.Button();
+            this.listboxresult = new System.Windows.Forms.ListBox();
             this.lblAvisoLista = new System.Windows.Forms.Label();
             this.btnadicionarelemento = new System.Windows.Forms.Button();
             this.listboxtipo = new System.Windows.Forms.ListBox();
@@ -158,6 +163,11 @@
             this.pnllist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnllist.Controls.Add(this.btnApenasVerdade);
+            this.pnllist.Controls.Add(this.btnApenasVogais);
+            this.pnllist.Controls.Add(this.btnNumeroPar);
+            this.pnllist.Controls.Add(this.btnMesPar);
+            this.pnllist.Controls.Add(this.listboxresult);
             this.pnllist.Controls.Add(this.lblAvisoLista);
             this.pnllist.Controls.Add(this.btnadicionarelemento);
             this.pnllist.Controls.Add(this.listboxtipo);
@@ -168,6 +178,57 @@
             this.pnllist.Name = "pnllist";
             this.pnllist.Size = new System.Drawing.Size(475, 335);
             this.pnllist.TabIndex = 8;
+            // 
+            // btnApenasVerdade
+            // 
+            this.btnApenasVerdade.Location = new System.Drawing.Point(162, 243);
+            this.btnApenasVerdade.Name = "btnApenasVerdade";
+            this.btnApenasVerdade.Size = new System.Drawing.Size(106, 23);
+            this.btnApenasVerdade.TabIndex = 30;
+            this.btnApenasVerdade.Text = "Só Verdades >";
+            this.btnApenasVerdade.UseVisualStyleBackColor = true;
+            this.btnApenasVerdade.Click += new System.EventHandler(this.btnApenasVerdade_Click);
+            // 
+            // btnApenasVogais
+            // 
+            this.btnApenasVogais.Location = new System.Drawing.Point(162, 214);
+            this.btnApenasVogais.Name = "btnApenasVogais";
+            this.btnApenasVogais.Size = new System.Drawing.Size(106, 23);
+            this.btnApenasVogais.TabIndex = 29;
+            this.btnApenasVogais.Text = "Apenas Vogais >";
+            this.btnApenasVogais.UseVisualStyleBackColor = true;
+            this.btnApenasVogais.Click += new System.EventHandler(this.btnApenasVogais_Click);
+            // 
+            // btnNumeroPar
+            // 
+            this.btnNumeroPar.Location = new System.Drawing.Point(162, 183);
+            this.btnNumeroPar.Name = "btnNumeroPar";
+            this.btnNumeroPar.Size = new System.Drawing.Size(106, 23);
+            this.btnNumeroPar.TabIndex = 28;
+            this.btnNumeroPar.Text = "Numero Par >";
+            this.btnNumeroPar.UseVisualStyleBackColor = true;
+            this.btnNumeroPar.Click += new System.EventHandler(this.btnNumeroPar_Click);
+            // 
+            // btnMesPar
+            // 
+            this.btnMesPar.Location = new System.Drawing.Point(162, 152);
+            this.btnMesPar.Name = "btnMesPar";
+            this.btnMesPar.Size = new System.Drawing.Size(106, 23);
+            this.btnMesPar.TabIndex = 27;
+            this.btnMesPar.Text = "Mês par >";
+            this.btnMesPar.UseVisualStyleBackColor = true;
+            this.btnMesPar.Click += new System.EventHandler(this.btnMesPar_Click);
+            // 
+            // listboxresult
+            // 
+            this.listboxresult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.listboxresult.FormattingEnabled = true;
+            this.listboxresult.ItemHeight = 15;
+            this.listboxresult.Location = new System.Drawing.Point(277, 110);
+            this.listboxresult.Name = "listboxresult";
+            this.listboxresult.Size = new System.Drawing.Size(192, 214);
+            this.listboxresult.TabIndex = 26;
             // 
             // lblAvisoLista
             // 
@@ -199,7 +260,7 @@
             this.listboxtipo.ItemHeight = 15;
             this.listboxtipo.Location = new System.Drawing.Point(22, 110);
             this.listboxtipo.Name = "listboxtipo";
-            this.listboxtipo.Size = new System.Drawing.Size(447, 214);
+            this.listboxtipo.Size = new System.Drawing.Size(136, 214);
             this.listboxtipo.TabIndex = 4;
             // 
             // txtelementolista
@@ -935,5 +996,10 @@
         private Label lblcarta;
         private Label label20;
         private Label lblAvisoLista;
+        private Button btnApenasVogais;
+        private Button btnNumeroPar;
+        private Button btnMesPar;
+        private ListBox listboxresult;
+        private Button btnApenasVerdade;
     }
 }

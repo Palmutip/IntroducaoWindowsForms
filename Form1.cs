@@ -306,6 +306,7 @@ namespace WinFormsApp1
             pnlstring.Visible = false;
 
             listboxtipo.Items.Clear();
+            listboxresult.Items.Clear();
             txtcomparador.Text = "";
 
             lblresultint.Text = " + 5 = ";
@@ -382,6 +383,140 @@ namespace WinFormsApp1
             listboxtipo.Items.Clear();
             lblAvisoLista.Visible = false;
             lblAvisoLista.Text = "";
+        }
+
+        private void btnMesPar_Click(object sender, EventArgs e)
+        {
+            lblAvisoLista.Visible = false;
+            lblAvisoLista.Text = "";
+
+            try
+            {
+                List<DateTime> datas = new List<DateTime>();
+
+                foreach (var item in listboxtipo.Items)
+                {
+                    DateTime dataAtual = Convert.ToDateTime(item);
+                    if (dataAtual.Month % 2 == 0)
+                        datas.Add(dataAtual);
+                }
+
+                foreach (DateTime data in datas)
+                {
+                    listboxresult.Items.Add(data.ToShortDateString());
+                }
+            }
+            catch
+            {
+                lblAvisoLista.Visible = true;
+                lblAvisoLista.Text = "Atenção, o valor inserido é incompatível com o tipo definido na lista";
+            }
+        }
+
+        private void btnNumeroPar_Click(object sender, EventArgs e)
+        {
+            lblAvisoLista.Visible = false;
+            lblAvisoLista.Text = "";
+
+            try
+            {
+                List<int> numeros = new List<int>();
+
+                foreach (var item in listboxtipo.Items)
+                {
+                    int numeroAtual = Convert.ToInt32(item);
+                    if (numeroAtual % 2 == 0)
+                        numeros.Add(numeroAtual);
+                }
+
+                foreach (int numero in numeros)
+                {
+                    listboxresult.Items.Add(numero.ToString());
+                }
+            }
+            catch
+            {
+                lblAvisoLista.Visible = true;
+                lblAvisoLista.Text = "Atenção, o valor inserido é incompatível com o tipo definido na lista";
+            }            
+        }
+
+        private void btnApenasVogais_Click(object sender, EventArgs e)
+        {
+            lblAvisoLista.Visible = false;
+            lblAvisoLista.Text = "";
+
+            try
+            {
+                List<string> palavras = new List<string>();
+
+                foreach (var item in listboxtipo.Items)
+                {
+                    string palavraAtual = item.ToString();
+
+                    foreach (char letra in palavraAtual)
+                    {
+                        if (letra == 'A' || letra == 'a' || letra == 'E' || letra == 'e' || letra == 'I' || letra == 'i' || letra == 'O' || letra == 'o' || letra == 'U' || letra == 'u')
+                        {
+                            palavras.Add(palavraAtual);
+                            break;
+                        }
+                    }
+
+                }
+
+                List<char> letras = new List<char>();
+
+                foreach (string palavra in palavras)
+                {
+                    foreach (char letra in palavra)
+                    {
+                        if (letra == 'A' || letra == 'a' || letra == 'E' || letra == 'e' || letra == 'I' || letra == 'i' || letra == 'O' || letra == 'o' || letra == 'U' || letra == 'u')
+                        {
+                            if (!letras.Contains(letra))
+                            {
+                                letras.Add(letra);
+                                listboxresult.Items.Add(letra.ToString());
+                            }
+                        }
+                    }
+
+                }
+            }
+            catch
+            {
+                lblAvisoLista.Visible = true;
+                lblAvisoLista.Text = "Atenção, o valor inserido é incompatível com o tipo definido na lista";
+            }
+            
+        }
+
+        private void btnApenasVerdade_Click(object sender, EventArgs e)
+        {
+            lblAvisoLista.Visible = false;
+            lblAvisoLista.Text = "";
+
+            try
+            {
+                List<bool> logicos = new List<bool>();
+
+                foreach (var item in listboxtipo.Items)
+                {
+                    bool situacao = Convert.ToBoolean(item);
+                    if (situacao)
+                        logicos.Add(situacao);
+                }
+
+                foreach (bool logico in logicos)
+                {
+                    listboxresult.Items.Add(logico);
+                }
+            }
+            catch
+            {
+                lblAvisoLista.Visible = true;
+                lblAvisoLista.Text = "Atenção, o valor inserido é incompatível com o tipo definido na lista";
+            }            
         }
     }
 }
