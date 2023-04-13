@@ -1,6 +1,8 @@
-# IntroduÁ„o ao Windows Forms
+# Introdu√ß√£o ao Windows Forms
 
-AplicaÁ„o do tipo formul·rio com intuito de validar conhecimentos
+Este resposit√≥rio foi criado para ajudar a ensinar um amigo os principios da programa√ß√£o e o funcionamento dos formul√°rios com windows forms
+
+Aplica√ß√£o do tipo formul√°rio com intuito de validar conhecimentos
 
 Planiliha auxiliar:
 https://docs.google.com/spreadsheets/d/1YXjfymSvZDfVxSY24qpjtl2wB5RK59k23ulxE_cAd14/edit?usp=sharing
